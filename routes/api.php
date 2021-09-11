@@ -1,11 +1,12 @@
 <?php
 
-use App\http\Controllers\QuoteController;
-use App\http\Controllers\LineController;
-use App\http\Controllers\CharacterController;
-use App\http\Controllers\SourceController;
-use App\http\Controllers\MediaTimingController;
-use App\http\Controllers\AuthController;
+use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\LineController;
+use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\SourceController;
+use App\Http\Controllers\SoundController;
+use App\Http\Controllers\MediaTimingController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
