@@ -15,8 +15,14 @@ class CreateSourcesTable extends Migration
     {
         Schema::create('sources', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('medium');
             $table->string('myanimelist_url');
             $table->timestamps();
+        });
+
+        Schema::table('quotes', function (Blueprint $table) {
+            $table->foreignId('source_id')->constrained();
         });
     }
 

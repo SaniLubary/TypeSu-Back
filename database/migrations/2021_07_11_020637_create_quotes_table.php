@@ -15,10 +15,13 @@ class CreateQuotesTable extends Migration
     {
         Schema::create('quotes', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('source_id');
-            $table->string('reference_in_source');
+            $table->string('quote');
+            $table->string('reference_in_source')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('quotes', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained();
         });
     }
 
